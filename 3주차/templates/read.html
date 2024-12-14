@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/read.css') }}" type="text/css">
+</head>
+<body>
+    <div class="first_background_size">
+        <h1 class="title">게시판</h1>
+    </div>
+    {% if posts %}
+        {% for post in posts %}
+            <h3 class="text" >제목: {{ post[1] }}</h3>
+            <hr>
+            <div class="textarea_div">
+                <h3>내용 : </h3>
+                <textarea class="textarea">{{ post[2] }}</textarea>
+            </div>
+            
+            <hr>
+            <div style="background-color: rgb(114, 141, 108);">
+                <div class="text">
+                    <form action="/delete/{{post[0]}}">
+                        <button type="submit">글 삭제</button>
+                    </form>
+                </div>
+                <div class="text">
+                    <form action="/update/{{ post[0] }}">
+                        <button type="submit">수정 페이지로</button>
+                    </form> 
+                </div>
+                
+                <form action="/" class="text">
+                    <button type="submit">메인 페이지로</button>
+                </form>
+            </div>
+            
+    
+        {% endfor %}
+    {% else %}
+        <p>작성된 글이 없습니다.</p>
+    {% endif %}
+    <hr>
+    
+</body>
+</html>

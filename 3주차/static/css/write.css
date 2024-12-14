@@ -1,0 +1,30 @@
+.first_background_size{
+    height:200px;
+    text-align: center;
+    background-color: rgb(187,168,159);
+}
+.title{
+    text-align: center;
+    font-size : 100px;;
+    color: white;
+    line-height: 200px;
+}
+
+.title_div{
+    text-align: center;
+}
+
+.context_div{
+    background-color: rgb(202, 203, 204);
+    text-align: center;
+}
+
+.textarea{
+    text-align: center;
+    width: 1000px;
+    height: 700px;
+}
+.submit_div{
+    text-align: center;
+    background-color: rgb(114, 141, 108);
+}

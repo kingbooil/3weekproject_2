@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글쓰기</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/write.css') }}" type="text/css">
+</head>
+<body>
+    <div class="first_background_size">
+        <h1 class="title">게시판</h1>
+    </div>
+    <hr>
+    <form action="/write" method="post" >
+        <div class="title_div">
+            <input type="text" name="name" placeholder="제목 입력 : ">
+        </div>
+        <hr>
+
+        <div class="context_div">
+            <textarea class="textarea" type="text" name="text" placeholder="본문 입력 : "></textarea>
+            <hr>
+        </div>
+        <div class="submit_div">
+            <button type="submit">제출</button>
+        </div>
+        
+        <hr>
+    </form>
+</body>
+</html>
